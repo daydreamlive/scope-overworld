@@ -21,7 +21,7 @@ Follow the [manual installation](https://github.com/daydreamlive/scope/tree/main
 Install the plugin within the `scope` directory:
 
 ```
-DAYDREAM_SCOPE_PREVIEW=1 uv run daydream-scope git+https://github.com/daydreamlive/scope-overworld.git
+DAYDREAM_SCOPE_PREVIEW=1 uv run daydream-scope install git+https://github.com/daydreamlive/scope-overworld.git
 ```
 
 Confirm that the plugin is installed:
@@ -65,10 +65,15 @@ Start the server:
 
 The web frontend will be available at `http://localhost:8000` by default.
 
+The `waypoint` pipeline will be available in:
+- The frontend under the Pipeline ID dropdown in the Settings panel.
+- The [API](https://github.com/daydreamlive/scope/blob/main/docs/server.md) by [loading the pipeline](https://github.com/daydreamlive/scope/blob/main/docs/api/load.md#load-a-pipeline) using the `waypoint` pipeline ID. If you are not using the frontend, `uv run download_models --pipeline waypoint` can be used to download the model weights first.
+
 ## Backlog
 
 - [ ] Configurable mouse sensitivity
 - [ ] Text prompt support
 - [ ] Additional key mappings
+
 
 
