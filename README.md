@@ -16,7 +16,7 @@ The plugin uses [world_engine](https://github.com/Wayfarer-Labs/world_engine) un
 
 ## Install
 
-Follow the [manual installation](https://github.com/daydreamlive/scope/tree/main?tab=readme-ov-file#manual-installation) instructions for Scope.
+Follow the [manual installation](https://github.com/daydreamlive/scope/tree/main?tab=readme-ov-file#manual-installation) (plugin support for the desktop app is not available yet) instructions for Scope.
 
 Install the plugin within the `scope` directory:
 
@@ -65,5 +65,11 @@ Start the server:
 
 The web frontend will be available at `http://localhost:8000` by default.
 
+## Backlog
+
+- [ ] Text prompt support
+- [ ] Additional key mappings
+
 
 The `waypoint` pipeline will be available in the Pipeline ID dropdown in the Settings panel.
+
