@@ -67,9 +67,8 @@ The web frontend will be available at `http://localhost:8000` by default.
 
 ## Backlog
 
+- [ ] Configurable mouse sensitivity
 - [ ] Text prompt support
 - [ ] Additional key mappings
 
-
-The `waypoint` pipeline will be available in the Pipeline ID dropdown in the Settings panel.
 
