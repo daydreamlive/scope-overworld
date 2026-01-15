@@ -2,7 +2,7 @@
 
 <img width="1902" height="911" alt="Screenshot 2026-01-15 153408" src="https://github.com/user-attachments/assets/3ba71d58-e5c8-4fa7-94d0-ed3673692a82" />
 
-[Daydream Scope](https://github.com/daydreamlive/scope) plugin providing pipelines for OverWorld ([Wayfarer Labs](https://wayfarerlabs.ai/)) world models.
+[Scope](https://github.com/daydreamlive/scope) plugin providing pipelines for OverWorld ([Wayfarer Labs](https://wayfarerlabs.ai/)) world models.
 
 The plugin uses [world_engine](https://github.com/Wayfarer-Labs/world_engine) under the hood for inference.
 
@@ -76,6 +76,7 @@ The `waypoint` pipeline will be available in:
 - [ ] Configurable mouse sensitivity
 - [ ] Text prompt support
 - [ ] Additional key mappings
+
 
 
 
