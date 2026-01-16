@@ -8,6 +8,7 @@ The plugin uses [world_engine](https://github.com/Wayfarer-Labs/world_engine) un
 
 > [!IMPORTANT]
 > Plugin support is a preview feature in Scope right now and the APIs are subject to breaking change prior to official release.
+> Be sure to be running v0.1.0-beta.3+
 
 ## Supported Models
 
@@ -76,6 +77,7 @@ The `waypoint` pipeline will be available in:
 - [ ] Configurable mouse sensitivity
 - [ ] Text prompt support
 - [ ] Additional key mappings
+
 
 
 
