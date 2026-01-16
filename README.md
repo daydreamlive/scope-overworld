@@ -47,10 +47,16 @@ DAYDREAM_SCOPE_PREVIEW=1 uv run daydream-scope pipelines
 
 Configure your `read` HuggingFace [token](https://huggingface.co/docs/hub/en/security-tokens) which will be used for authentication when downloading model weights.
 
-On Windows:
+On Windows Command Prompt:
 
 ```
 set HF_TOKEN=your_token_here
+```
+
+On Windows Powershell
+
+```
+$env:HF_TOKEN="your_token_here"
 ```
 
 On Unix/Linux:
@@ -76,6 +82,7 @@ The `waypoint` pipeline will be available in:
 - [ ] Configurable mouse sensitivity
 - [ ] Text prompt support
 - [ ] Additional key mappings
+
 
 
 
