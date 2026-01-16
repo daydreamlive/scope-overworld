@@ -71,11 +71,14 @@ The `waypoint` pipeline will be available in:
 - The frontend under the Pipeline ID dropdown in the Settings panel.
 - The [API](https://github.com/daydreamlive/scope/blob/main/docs/server.md) by [loading the pipeline](https://github.com/daydreamlive/scope/blob/main/docs/api/load.md#load-a-pipeline) using the `waypoint` pipeline ID. If you are not using the frontend, `uv run download_models --pipeline waypoint` can be used to download the model weights first.
 
+Once you download the model, it takes about 20 mins for the model to be ready. Go make some tea, come back, and have fun!
+
 ## Backlog
 
 - [ ] Configurable mouse sensitivity
 - [ ] Text prompt support
 - [ ] Additional key mappings
+
 
 
 
