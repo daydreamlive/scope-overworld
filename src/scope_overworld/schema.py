@@ -16,14 +16,14 @@ class WaypointConfig(BasePipelineConfig):
     pipeline_description = "A streaming pipeline for Waypoint autoregressive video world models from OverWorld."
     docs_url = "https://github.com/Wayfarer-Labs/world_engine"
 
-    supports_prompts = False 
+    supports_prompts = False
     supports_cache_management = True
 
     modes = {"text": ModeDefaults(default=True)}
 
     artifacts: ClassVar[list[Artifact]] = [
         HuggingfaceRepoArtifact(
-            repo_id="OverWorld/Waypoint-Medium-Beta-2026-01-11",
+            repo_id="OverWorld/Waypoint-Medium-Beta-2026-01-16",
             files=["model.safetensors", "config.yaml"],
         ),
         HuggingfaceRepoArtifact(
