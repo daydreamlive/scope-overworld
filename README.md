@@ -1,5 +1,7 @@
 # scope-overworld
 
+[![Discord](https://img.shields.io/badge/Discord-5865F2?logo=discord&logoColor=white)](https://discord.gg/mnfGR4Fjhp)
+
 <img width="1902" height="911" alt="Screenshot 2026-01-15 153408" src="https://github.com/user-attachments/assets/3ba71d58-e5c8-4fa7-94d0-ed3673692a82" />
 
 [Scope](https://github.com/daydreamlive/scope) plugin providing pipelines for OverWorld ([Wayfarer Labs](https://wayfarerlabs.ai/)) world models.
@@ -85,6 +87,7 @@ Once you download the model, it takes about 20 mins for the model to be ready. G
 - [ ] Configurable mouse sensitivity
 - [ ] Text prompt support
 - [ ] Additional key mappings
+
 
 
 
