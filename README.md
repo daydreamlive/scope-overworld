@@ -41,6 +41,14 @@ Confirm that the `waypoint` pipeline is available:
 DAYDREAM_SCOPE_PREVIEW=1 uv run daydream-scope pipelines
 ```
 
+## Upgrade
+
+Upgrade the plugin to the latest version:
+
+```
+DAYDREAM_SCOPE_PREVIEW=1 uv run daydream-scope install --upgrade git+https://github.com/daydreamlive/scope-overworld.git
+```
+
 ## Usage
 
 ### Configure HuggingFace Token
@@ -87,6 +95,7 @@ Once you download the model, it takes about 20 mins for the model to be ready. G
 - [ ] Configurable mouse sensitivity
 - [ ] Text prompt support
 - [ ] Additional key mappings
+
 
 
 
