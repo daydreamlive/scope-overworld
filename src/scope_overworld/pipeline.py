@@ -42,13 +42,13 @@ class WaypointPipeline(Pipeline):
 
         self.engine = WorldEngine(
             model_path,
-            ae_uri=ae_path,
-            prompt_encoder_uri=prompt_encoder_path,
-            device=self.device,
-            dtype=self.dtype,
             model_config_overrides={
                 "n_frames": n_frames,
+                "ae_uri": ae_path,
+                "prompt_encoder_uri": prompt_encoder_path,
             },
+            device=self.device,
+            dtype=self.dtype,
         )
         self.engine.set_prompt(prompt)
         # Track current prompt to avoid redundant encoding
