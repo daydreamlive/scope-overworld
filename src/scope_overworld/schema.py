@@ -16,7 +16,10 @@ class WaypointConfig(BasePipelineConfig):
     pipeline_description = "A streaming pipeline for Waypoint autoregressive video world models from OverWorld."
     docs_url = "https://github.com/Wayfarer-Labs/world_engine"
 
-    supports_prompts = False 
+    supports_prompts = True
+    default_temporal_interpolation_method = None
+    default_spatial_interpolation_method = None
+
     supports_cache_management = True
 
     modes = {"text": ModeDefaults(default=True)}
