@@ -53,7 +53,7 @@ DAYDREAM_SCOPE_PREVIEW=1 uv run daydream-scope install --upgrade git+https://git
 ### Configure HuggingFace Token
 
 > [!IMPORTANT]
-> Scope will only be able to download the model weights for you if you are a part of the Waypoint-1 private beta and your HuggingFace account has access to the model repo.
+> Scope will only be able to download the model weights for you if your HuggingFace account has access to the model repo.
 
 Configure your `read` HuggingFace [token](https://huggingface.co/docs/hub/en/security-tokens) which will be used for authentication when downloading model weights.
 
