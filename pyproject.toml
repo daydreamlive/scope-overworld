@@ -25,7 +25,7 @@ override-dependencies = [
 
 [tool.uv.sources]
 daydream-scope = { git = "https://github.com/daydreamlive/scope" }
-world-engine = { git = "https://github.com/daydreamlive/world_engine", branch = "local-uris" }
+world-engine = { git = "https://github.com/daydreamlive/world_engine", branch = "pin-torch" }
 torch = [
     { index = "pytorch-cu128", marker = "sys_platform == 'linux' or sys_platform == 'win32'" },
 ]

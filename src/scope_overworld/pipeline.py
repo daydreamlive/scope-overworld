@@ -36,7 +36,7 @@ class WaypointPipeline(Pipeline):
         self.dtype = dtype
 
         # Build local model paths from DAYDREAM_SCOPE_MODELS_DIR
-        model_path = str(get_model_file_path("Waypoint-Medium-Beta-2026-01-16"))
+        model_path = str(get_model_file_path("Waypoint-1-Small"))
         ae_path = str(get_model_file_path("owl_vae_f16_c16_distill_v0_nogan"))
         prompt_encoder_path = str(get_model_file_path("umt5-xl"))
 

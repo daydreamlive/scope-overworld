@@ -14,10 +14,9 @@ The plugin uses [world_engine](https://github.com/Wayfarer-Labs/world_engine) un
 
 ## Supported Models
 
-- Waypoint-1-Medium-Beta (via the `waypoint` pipeline)
+- [Waypoint-1-Small](https://huggingface.co/Overworld/Waypoint-1-Small) (via the `waypoint` pipeline)
 
-> [!IMPORTANT]
-> The Waypoint-1 model is currently in private beta and you must use this [interest form](https://tally.so/r/MeNzW8) to request access.
+[Waypoint-1-Medium](https://huggingface.co/Overworld/Waypoint-1-Medium) coming soon.
 
 ## Install
 
@@ -93,13 +92,4 @@ Once you download the model, it takes about 20 mins for the model to be ready. G
 ## Backlog
 
 - [ ] Configurable mouse sensitivity
-- [ ] Text prompt support
 - [ ] Additional key mappings
-
-
-
-
-
-
-
-

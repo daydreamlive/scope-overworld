@@ -26,7 +26,7 @@ class WaypointConfig(BasePipelineConfig):
 
     artifacts: ClassVar[list[Artifact]] = [
         HuggingfaceRepoArtifact(
-            repo_id="OverWorld/Waypoint-Medium-Beta-2026-01-16",
+            repo_id="Overworld/Waypoint-1-Small",
             files=["model.safetensors", "config.yaml"],
         ),
         HuggingfaceRepoArtifact(
