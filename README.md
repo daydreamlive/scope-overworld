@@ -22,7 +22,7 @@ The plugin uses [world_engine](https://github.com/Wayfarer-Labs/world_engine) un
 Follow the [manual installation](https://github.com/daydreamlive/scope/tree/main?tab=readme-ov-file#manual-installation) (plugin support for the desktop app is not available yet) instructions for Scope.
 
 > [!IMPORTANT]
-> Make sure you install SCope the latest version of the `main` branch.
+> Make sure you install Scope with the latest version of the `main` branch.
 > If you are using [Runpod](https://github.com/daydreamlive/scope?tab=readme-ov-file#runpod), you need to use the `daydreamlive/scope:main` docker image. You can configure this in the Runpod template by editing the Docker image setting.
 
 Install the plugin within the `scope` directory:
@@ -96,3 +96,4 @@ Once you download the model, it takes about 20 mins for the model to be ready. G
 
 - [ ] Configurable mouse sensitivity
 - [ ] Additional key mappings
+
