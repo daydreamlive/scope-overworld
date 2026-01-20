@@ -43,6 +43,9 @@ Confirm that the `waypoint` pipeline is available:
 DAYDREAM_SCOPE_PREVIEW=1 uv run daydream-scope pipelines
 ```
 
+> [!IMPORTANT]
+> If you are using Runpod, you will need to restart the pod for plugin's pipelines to be visible in the frontend.
+
 ## Upgrade
 
 Upgrade the plugin to the latest version:
@@ -96,4 +99,5 @@ Once you download the model, it takes about 20 mins for the model to be ready. G
 
 - [ ] Configurable mouse sensitivity
 - [ ] Additional key mappings
+
 
