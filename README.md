@@ -10,7 +10,6 @@ The plugin uses [world_engine](https://github.com/Wayfarer-Labs/world_engine) un
 
 > [!IMPORTANT]
 > Plugin support is a preview feature in Scope right now and the APIs are subject to breaking change prior to official release.
-> Be sure to be running v0.1.0-beta.3+
 
 ## Supported Models
 
@@ -21,6 +20,10 @@ The plugin uses [world_engine](https://github.com/Wayfarer-Labs/world_engine) un
 ## Install
 
 Follow the [manual installation](https://github.com/daydreamlive/scope/tree/main?tab=readme-ov-file#manual-installation) (plugin support for the desktop app is not available yet) instructions for Scope.
+
+> [!IMPORTANT]
+> Make sure you install SCope the latest version of the `main` branch.
+> If you are using [Runpod](https://github.com/daydreamlive/scope?tab=readme-ov-file#runpod), you need to use the `daydreamlive/scope:main` docker image. You can configure this in the Runpod template by editing the Docker image setting.
 
 Install the plugin within the `scope` directory:
 
