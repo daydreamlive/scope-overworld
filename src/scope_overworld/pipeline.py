@@ -61,7 +61,7 @@ class WaypointPipeline(Pipeline):
         for _ in range(n_frames):
             self.engine.gen_frame(ctrl=WorldCtrlInput())
 
-    def __call__(self, **kwargs) -> torch.Tensor:
+    def __call__(self, **kwargs) -> dict:
         """Generate a frame with controller input.
 
         Args:
@@ -109,4 +109,4 @@ class WaypointPipeline(Pipeline):
         ctrl = WorldCtrlInput(button=win_keys, mouse=ctrl_input.mouse)
 
         frame = self.engine.gen_frame(ctrl=ctrl)
-        return frame.unsqueeze(0).float() / 255.0
+        return {"video": frame.unsqueeze(0).float() / 255.0}
