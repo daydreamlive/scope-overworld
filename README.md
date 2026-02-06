@@ -4,100 +4,34 @@
 
 <img width="1902" height="911" alt="Screenshot 2026-01-15 153408" src="https://github.com/user-attachments/assets/3ba71d58-e5c8-4fa7-94d0-ed3673692a82" />
 
-[Scope](https://github.com/daydreamlive/scope) plugin providing pipelines for OverWorld ([Wayfarer Labs](https://wayfarerlabs.ai/)) world models.
-
-The plugin uses [world_engine](https://github.com/Wayfarer-Labs/world_engine) under the hood for inference.
-
-> [!IMPORTANT]
-> Plugin support is a preview feature in Scope right now and the APIs are subject to breaking change prior to official release.
-
-## Supported Models
-
-- [Waypoint-1-Small](https://huggingface.co/Overworld/Waypoint-1-Small) (via the `waypoint` pipeline)
-
-[Waypoint-1-Medium](https://huggingface.co/Overworld/Waypoint-1-Medium) coming soon.
-
-## Install
-
-Follow the [manual installation](https://github.com/daydreamlive/scope/tree/main?tab=readme-ov-file#manual-installation) (plugin support for the desktop app is not available yet) instructions for Scope.
+[Scope](https://github.com/daydreamlive/scope) plugin providing pipelines for Overworld world models.
 
 > [!IMPORTANT]
 > Make sure you install Scope with the latest version of the `main` branch.
 > If you are using [Runpod](https://github.com/daydreamlive/scope?tab=readme-ov-file#runpod), you need to use the `daydreamlive/scope:main` docker image. You can configure this in the Runpod template by editing the Docker image setting.
 
-Install the plugin within the `scope` directory:
+## Features
+
+- Waypoint - Generate worlds using the [Waypoint-1.1-Small](https://huggingface.co/Overworld/Waypoint-1.1-Small) model
+
+## HuggingFace
+
+Model weights require HuggingFace authentication. See the [HuggingFace guide](https://github.com/daydreamlive/scope/blob/main/docs/huggingface.md) for setup instructions.
+
+## Install
+
+Follow the [Scope plugins guide](https://github.com/daydreamlive/scope/blob/main/docs/plugins.md) to install this plugin using the URL:
 
 ```
-DAYDREAM_SCOPE_PREVIEW=1 uv run daydream-scope install git+https://github.com/daydreamlive/scope-overworld.git
+https://github.com/daydreamlive/scope-overworld.git
 ```
-
-Confirm that the plugin is installed:
-
-```
-DAYDREAM_SCOPE_PREVIEW=1 uv run daydream-scope plugins
-```
-
-Confirm that the `waypoint` pipeline is available:
-
-```
-DAYDREAM_SCOPE_PREVIEW=1 uv run daydream-scope pipelines
-```
-
-> [!IMPORTANT]
-> If you are using Runpod, you will need to restart the pod for plugin's pipelines to be visible in the frontend.
 
 ## Upgrade
 
-Upgrade the plugin to the latest version:
+Follow the [Scope plugins guide](https://github.com/daydreamlive/scope/blob/main/docs/plugins.md) to upgrade this plugin to the latest version.
 
-```
-DAYDREAM_SCOPE_PREVIEW=1 uv run daydream-scope install --upgrade git+https://github.com/daydreamlive/scope-overworld.git
-```
+## Architecture
 
-## Usage
+The `waypoint` pipeline uses [world_engine](https://github.com/Wayfarer-Labs/world_engine) for inference. It loads three model components: the Waypoint world model, OWL VAE (encoder/decoder), and UMT5-XL (text encoder). On first load, a JIT warmup pass runs for optimized performance which could take as long as 20 minutes on the first run.
 
-### Configure HuggingFace Token
-
-> [!IMPORTANT]
-> Scope will only be able to download the model weights for you if your HuggingFace account has access to the model repo.
-
-Configure your `read` HuggingFace [token](https://huggingface.co/docs/hub/en/security-tokens) which will be used for authentication when downloading model weights.
-
-On Windows Command Prompt:
-
-```
-set HF_TOKEN=your_token_here
-```
-
-On Windows Powershell
-
-```
-$env:HF_TOKEN="your_token_here"
-```
-
-On Unix/Linux:
-
-```
-export HF_TOKEN=your_token_here
-```
-
-### Run Scope
-
-Start the server:
-
-`uv run daydream-scope`
-
-The web frontend will be available at `http://localhost:8000` by default.
-
-The `waypoint` pipeline will be available in:
-- The frontend under the Pipeline ID dropdown in the Settings panel.
-- The [API](https://github.com/daydreamlive/scope/blob/main/docs/server.md) by [loading the pipeline](https://github.com/daydreamlive/scope/blob/main/docs/api/load.md#load-a-pipeline) using the `waypoint` pipeline ID. If you are not using the frontend, `uv run download_models --pipeline waypoint` can be used to download the model weights first.
-
-Once you download the model, it takes about 20 mins for the model to be ready. Go make some tea, come back, and have fun!
-
-## Backlog
-
-- [ ] Configurable mouse sensitivity
-- [ ] Additional key mappings
-
-
+Each frame: controller input and prompt are processed → world_engine generates the next frame → the pipeline outputs a video tensor.
